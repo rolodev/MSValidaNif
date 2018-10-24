@@ -10,9 +10,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.aeat.valida.Validador;
 import com.spring.mvc.model.ValidaNif;
 import com.spring.mvc.service.MSValidaNifService;
+import com.spring.mvc.util.Validador;
 
 @CrossOrigin(origins = { "*" }, maxAge = 3000)
 @RestController
@@ -29,8 +29,8 @@ public class HelloWorldRestController {
         System.out.println("validar nif = " + nif);
                 
         Validador val = new Validador();
-        int ret = val.checkNif(nif);
-        if( ret > 0) {
+        boolean ret = val.isvalido(nif);
+        if( ret) {
         	//NIF_OK validacion correcta damos de alta en la tabla de validaciones
             System.out.println("validacion correcta de nif = " + nif);
             ValidaNif validanif = new ValidaNif();

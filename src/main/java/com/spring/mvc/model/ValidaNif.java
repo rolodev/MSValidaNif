@@ -37,7 +37,7 @@ public class ValidaNif implements Serializable {
 	private String nif;
 	
 	@Basic
-	@Column(name = "resultado", columnDefinition="varchar(1) NOT NULL")
+	@Column(name = "resultado", columnDefinition="varchar(10) NOT NULL")
 	private String resultado;
 	
 	@Basic
