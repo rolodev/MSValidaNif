@@ -33,7 +33,6 @@ public class HelloWorldRestController {
         System.out.println("HelloWorldRestController.getUser() resultado de validacion = "+ret);
         if( ret) {
         	//NIF_OK validacion correcta damos de alta en la tabla de validaciones
-            System.out.println("validacion correcta de nif = " + nif);
             ValidaNif validanif = new ValidaNif();
             validanif.setNif(nif);
             validanif.setResultado(String.valueOf(ret));
