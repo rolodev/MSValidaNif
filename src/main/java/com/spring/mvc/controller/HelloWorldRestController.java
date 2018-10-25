@@ -30,6 +30,7 @@ public class HelloWorldRestController {
                 
         Validador val = new Validador();
         boolean ret = val.isvalido(nif);
+        System.out.println("HelloWorldRestController.getUser() resultado de validacion = "+ret);
         if( ret) {
         	//NIF_OK validacion correcta damos de alta en la tabla de validaciones
             System.out.println("validacion correcta de nif = " + nif);
@@ -41,7 +42,7 @@ public class HelloWorldRestController {
         
         }        
      
-        return new ResponseEntity<String>(String.valueOf(ret), HttpStatus.NOT_FOUND);
+        return new ResponseEntity<String>(String.valueOf(ret), HttpStatus.OK);
     } 
  
 
