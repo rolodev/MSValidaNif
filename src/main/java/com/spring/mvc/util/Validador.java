@@ -45,6 +45,9 @@ public class Validador {
      */
     public boolean isvalido(String nif) {
         nif = nif.toUpperCase();
+        if (nif.length() != 9) {
+        	return false;
+        }
         String a = nif.substring(0, 1);
 
         if (letrasCif.contains(a)) {
