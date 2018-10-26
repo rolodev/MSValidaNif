@@ -26,7 +26,7 @@ public class HelloWorldRestController {
      
     @RequestMapping(value = "/valida/{nif}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<String> getUser(@PathVariable("nif") String nif) throws Exception {
-        System.out.println("HelloWorldRestController.getUser() validar nif = " + nif);
+        System.out.println("HelloWorldRestController.getUser() valida nif = " + nif);
                 
         Validador val = new Validador();
         boolean ret = val.isvalido(nif);
